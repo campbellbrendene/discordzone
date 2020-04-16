@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM", "ScriptHost"],
+        "target": "ES3",
+        "strict": true,
+        "pretty": true,
+        "inlineSourceMap": true
+    },
+    "include": ["src/main.ts"]
+}

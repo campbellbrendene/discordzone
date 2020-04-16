@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "@types/node": "^13.11.1",
+    "brfs": "^2.0.2",
+    "browserify": "^16.5.1",
+    "http-server": "^0.12.1",
+    "sassify": "^4.0.1",
+    "tsify": "^4.0.1",
+    "typescript": "^3.8.3",
+    "uglifyify": "^5.0.2",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {
+    "phaser": "^3.22.0"
+  },
+  "scripts": {
+    "build": "browserify -g uglifyify src/main.ts -p [ tsify -p tsconfig.json ] -t sassify -t brfs -o public/bundle.js",
+    "watch": "watchify --verbose -g uglifyify src/main.ts -p [ tsify -p tsconfig.json ] -t sassify -t brfs -o public/bundle.js",
+    "serve": "http-server public"
+  }
+}
